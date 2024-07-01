@@ -9,9 +9,9 @@ function carregar() {
     mensagem.innerText = `${hora}:${min}`
 
     if (hora < 5) {
-        foto.src = 'imagens/noite.png'
         bomDia.innerText = 'Boa madrugada'
-        document.body.style.backgroundColor = "#4E8DAD"
+        document.body.style.backgroundColor = "--noite"
+        if 
     } else if (hora >= 5 && hora < 7) {
         foto.src = "imagens/manha.png"
         bomDia.innerText = 'Bom dia'

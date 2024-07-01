@@ -1,3 +1,10 @@
+:root {
+    --manha: #F6D66F;
+    --tarde: #5CA0EB;
+    --noite: #074E82;
+}
+
+
 * {
     margin: 0;
     padding: 0;
