@@ -36,4 +36,14 @@ function carregar() {
         foto.src = 'none'
         bomDia.innerText = 'Hora inválida'
     }
+
+
+
+    var dia = data.getDate()
+    var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    var mes = meses[data.getMonth()]
+    var ano = data.getFullYear()
+
+    var teste = document.getElementById('teste')
+    teste.innerText = `${dia} de ${mes} de ${ano}`
 }
