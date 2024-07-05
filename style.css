@@ -16,3 +16,12 @@ main {
 section {
     flex: auto;
 }
+
+img {
+    width: 100%;
+}
+
+section p {
+    font-size: 2em;
+    font-weight: 500;
+}

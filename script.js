@@ -21,16 +21,20 @@ function carregar() {
 
     if (hora >= 0 && hora <= 5) {
         cumprimento.innerText = 'Boa madrugada'
-        foto.src = 'imagens/noite.png'
+        foto.src = 'imagens/lua.png'
+        document.body.style.background = "#1A2737"
     } else if (hora <= 11) {
         cumprimento.innerText = 'Bom dia'
-        foto.src = 'imagens/tarde.png'
+        foto.src = 'imagens/sol.png'
+        document.body.style.background = "#04707A"
     } else if (hora <= 17) {
         cumprimento.innerText = 'Boa tarde'
-        foto.src = 'imagens/tarde.png'
+        foto.src = 'imagens/sol.png'
+        document.body.style.background = "#FECF9A"
     } else {
         cumprimento.innerText = 'Boa noite'
-        foto.src = 'imagens/noite.png'
+        foto.src = 'imagens/lua.png'
+        document.body.style.background = "#1A2737"
     }
 
 
