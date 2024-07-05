@@ -1,49 +1,38 @@
-
-
 function carregar() {
-    var mensagem = document.getElementById('mensagem')
-    var foto = document.getElementById('foto')
+
+    var cumprimento = document.getElementById('cumprimento')
+
     var data = new Date()
     var hora = data.getHours()
-    var min = data.getMinutes()
-    mensagem.innerText = `${hora}:${min}`
+    var minutos = data.getMinutes().toLocaleString('pt-BR', {minute: '2'});
 
-    if (hora < 5) {
-        bomDia.innerText = 'Boa madrugada'
-        document.body.style.backgroundColor = "--noite"
-        if 
-    } else if (hora >= 5 && hora < 7) {
-        foto.src = "imagens/manha.png"
-        bomDia.innerText = 'Bom dia'
-        document.body.style.backgroundColor = "#5D718C"
-    } else if (hora >=7 && hora <=11) {
-        foto.src = "imagens/dia.png"
-        bomDia.innerText = 'Bom dia'
-        document.body.style.backgroundColor = "#F2994B"
-    } else if (hora <= 16 ) {
-        foto.src = "imagens/dia.png"
-        bomDia.innerText = 'Boa tarde'
-        document.body.style.backgroundColor = "#F67F3D"
-    } else if (hora == 17) {
-        foto.src = 'imagens/tarde.png'
-        bomDia.innerText = 'Boa tarde'
-        document.body.style.backgroundColor = "#FABD69"
-    } else if (hora < 24) {
+    var dia = data.getDay()
+    var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    var mes = meses[data.getMonth()]
+    var ano = data.getFullYear()
+
+    var hr = document.getElementById('hr')
+    hr.innerHTML = `${hora}:${minutos}`
+
+    var hoje = document.getElementById('hoje')
+    hoje.innerText = `${dia} de ${mes} de ${ano}`
+
+    var foto = document.getElementById('foto')
+
+    if (hora >= 0 && hora <= 5) {
+        cumprimento.innerText = 'Boa madrugada'
         foto.src = 'imagens/noite.png'
-        bomDia.innerText = 'Boa noite'
-        document.body.style.backgroundColor = "#4E8DAD"
+    } else if (hora <= 11) {
+        cumprimento.innerText = 'Bom dia'
+        foto.src = 'imagens/tarde.png'
+    } else if (hora <= 17) {
+        cumprimento.innerText = 'Boa tarde'
+        foto.src = 'imagens/tarde.png'
     } else {
-        foto.src = 'none'
-        bomDia.innerText = 'Hora inválida'
+        cumprimento.innerText = 'Boa noite'
+        foto.src = 'imagens/noite.png'
     }
 
 
 
-    var dia = data.getDate()
-    var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
-    var mes = meses[data.getMonth()]
-    var ano = data.getFullYear()
-
-    var teste = document.getElementById('teste')
-    teste.innerText = `${dia} de ${mes} de ${ano}`
 }
